@@ -1,93 +1,93 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <title>Menu | Lecker Lecker</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #ffffff;
-    color: #333;
-    text-align: center;
-}
-
-header {
-    background-color: #c6a436;
-    color: white;
-    padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf6ec;
+  margin: 0;
+  padding: 40px;
 }
 
 h1 {
-    font-size: 40px;
-    margin: 0;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-section {
-    padding: 60px 20px;
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.item {
-    display: inline-block;
-    width: 250px;
-    margin: 20px;
-    vertical-align: top;
-    text-align: center;
+.product-card {
+  background: white;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-.item img {
-    width: 100%;
-    border-radius: 8px;
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
-.item h2 {
-    font-size: 20px;
-    margin: 10px 0 5px 0;
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.item p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
+.product-card h2 {
+  margin: 15px 0 10px;
 }
 
-footer {
-    background-color: #c6a436;
-    color: white;
-    padding: 20px 0;
-    font-size: 14px;
+.product-card p {
+  padding: 0 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #d35400;
+  margin: 10px 0 20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Vorstellung</h1>
-    <p>-商品紹介-</p>
-</header>
+<h1>Menu</h1>
 
-<section>
-    <div class="item">
-        <img src="pretzel.jpg" alt="プレッツェル">
-        <h2>Pretzel</h2>
-        <p>伝統的なドイツの塩味プレッツェル</p>
-    </div>
+<div class="menu-container">
 
-    <div class="item">
-        <img src="brot.jpg" alt="ライ麦パン">
-        <h2>Rye Bread</h2>
-        <p>香ばしいライ麦のハードブレッド</p>
-    </div>
+  <div class="product-card">
+    <img src="croissant.jpg" alt="クロワッサン">
+    <h2>クロワッサン</h2>
+    <p>バターの香り豊かなサクサク食感。</p>
+    <p class="price">¥250</p>
+  </div>
 
-</section>
+  <div class="product-card">
+    <img src="baguette.jpg" alt="バゲット">
+    <h2>バゲット</h2>
+    <p>本場ドイツ風ハード系パン。</p>
+    <p class="price">¥350</p>
+  </div>
 
-<footer>
-    © 2026 Lecker Lecker Bäckerei
-</footer>
+  <div class="product-card">
+    <img src="pretzel.jpg" alt="プレッツェル">
+    <h2>プレッツェル</h2>
+    <p>外はカリッと中はもっちり。</p>
+    <p class="price">¥280</p>
+  </div>
+
+</div>
 
 </body>
 </html>
