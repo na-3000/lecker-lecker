@@ -27,13 +27,14 @@ h1 {
 }
 
 .product-card {
-  display: flex; 
-  align-items: center;
+  display: flex;        /* 横並び */
+  align-items: flex-start;
+  gap: 25px;
+
   background: white;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
 }
 
 .product-card:hover {
@@ -41,8 +42,8 @@ h1 {
 }
 
 .product-card img {
-  width: 250px;
-  height: 200px;
+  width: 220px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -74,6 +75,12 @@ h1 {
   font-size: 0.8em;   /* 少し小さく */
   font-weight: normal;
 }
+  
+.product-info {
+  display: flex;
+  flex-direction: column;  /* ← 縦に並ぶ */
+  text-align: left;
+}
 
 </style>
 </head>
@@ -84,22 +91,28 @@ h1 {
 
 <div class="menu-container">
 
-  <div class="product-card">
+ <div class="product-card">
+
   <img src="pan1.jpg" alt="ブレッツェル">
 
-  <h2>
-  <span class="de">Brezel</span><br>
-  <span class="jp-title">ブレッツェル</span>
-</h2>
+  <div class="product-info">
 
-  <p>
-    <span class="de-text">
-      Ein traditionelles deutsches Brot mit bernsteinfarbener Farbe und Steinsalz, das den Geschmack des Weizens hervorhebt.
-    </span><br>
-    飴色に光る、岩塩が小麦の風味をより引き立てるドイツの伝統的なパン。
-  </p>
+    <h2>
+      <span class="de">Brezel</span><br>
+      <span class="jp-title">ブレッツェル</span>
+    </h2>
 
-  <p class="price">¥250</p>
+    <p>
+      <span class="de-text">
+        Ein traditionelles deutsches Brot mit bernsteinfarbener Farbe und Steinsalz, das den Geschmack des Weizens hervorhebt.
+      </span><br>
+      飴色に光る、岩塩が小麦の風味をより引き立てるドイツの伝統的なパン。
+    </p>
+
+    <p class="price">¥250</p>
+
+  </div>
+
 </div>
 
     <div class="product-card">
