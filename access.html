@@ -41,10 +41,13 @@ header p {
 /* ===== ナビゲーション ===== */
 
 nav {
-    text-align: center;
-    margin: 0;
-}
+    margin-top: 20px;
 
+    display: flex;          /* ← 横並びにする */
+    justify-content: center;/* ← 中央寄せ */
+    gap: 20px;              /* ← ★ボタンの間隔 */
+    flex-wrap: wrap;        /* ← スマホで折り返し */
+}
 .menu-button {
     display: inline-block;
     padding: 14px 28px;
