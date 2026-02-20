@@ -1,18 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <title>Menu | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     background-color: #ffffff;
     color: #333;
 }
+
+/* ===== HEADER ===== */
 
 header {
     background-color: #c6a436;
@@ -25,108 +28,107 @@ header h1 {
     font-size: 40px;
     margin: 0;
 }
-    
+
 header p {
-    margin: 10px 0 0;
+    margin-top: 10px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 40px;
-    margin: 0;
-}
-    
-h1 {
-  margin-top: 40px;
-}
-    
-.jp-sub {
-  font-size: 0.6em;
-  font-weight: normal;
+/* ===== 横並びレイアウト ===== */
+
+.menu-layout {
+    display: flex;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 60px auto;
+    align-items: flex-start;
 }
 
-h1 {
-  margin-top: 40px;
+/* 左タイトル */
+
+.menu-side-title {
+    width: 260px;
+    text-align: left;
+    position: sticky;
+    top: 40px;
 }
 
 .menu-title {
-  margin-top: 40px;
-  text-align: center;
-  letter-spacing: 2px;
-  line-height: 1.2;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    font-size: 32px;
 }
-    
+
+.jp-sub {
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+/* ===== メニュー ===== */
+
 .menu-container {
-  display: flex;
-  flex-direction: column;  
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .product-card {
-  display: flex;  
-  align-items: center;
-  gap: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .product-card img {
-  width: 220px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.product-card h2 {
-  margin: 15px 0 10px;
-}
-
-.product-card p {
-  padding: 0 15px;
-}
-
-.price {
-  font-weight: bold;
-  color: #d35400;
-  margin: 10px 0 20px;
+.product-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .de {
-  font-size: 1.4em;
-  font-weight: bold;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.jp-title {
+    font-size: 0.8em;
+    font-weight: normal;
 }
 
 .de-text {
-  font-size: 1.2em;
+    font-size: 1.1em;
 }
-  
-.jp-title {
-  font-size: 0.8em;   /* 少し小さく */
-  font-weight: normal;
+
+.price {
+    font-weight: bold;
+    color: #d35400;
+    margin-top: 10px;
 }
-  
-.product-info {
-  display: flex;
-  flex-direction: column;  /* ← 縦に並ぶ */
-  text-align: left;
-}
+
+/* ===== FOOTER ===== */
 
 footer {
     background-color: #c6a436;
     color: white;
     padding: 20px 0;
-    font-size: 14px;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 </style>
@@ -139,116 +141,99 @@ footer {
   <p>-商品紹介-</p>
 </header>
 
-<section>
-<h1 class="menu-title">
-  << Bretzel et al. >><br>
-  <span class="jp-sub">-甘くない系-</span>
-</h1>
+<!-- ======================
+     甘くない系
+====================== -->
 
-<div class="menu-container">
+<div class="menu-layout">
 
-  <!-- 1 -->
-  <div class="product-card">
-    <img src="pan1.jpg" alt="ブレッツェル">
-    <div class="product-info">
-      <h2>
-        <span class="de">Brezel</span><br>
+  <!-- 左タイトル -->
+  <div class="menu-side-title">
+    <h1 class="menu-title">
+      << Bretzel et al. >><br>
+      <span class="jp-sub">-甘くない系-</span>
+    </h1>
+  </div>
+
+  <!-- 右メニュー -->
+  <div class="menu-container">
+
+    <div class="product-card">
+      <img src="pan1.jpg" alt="ブレッツェル">
+      <div class="product-info">
+        <span class="de">Brezel</span>
         <span class="jp-title">ブレッツェル</span>
-      </h2>
-      <p>
-        <span class="de-text">
-          Ein traditionelles deutsches Brot mit bernsteinfarbener Farbe und Steinsalz, das den Geschmack des Weizens hervorhebt.
-        </span><br>
-        飴色に光る、岩塩が小麦の風味をより引き立てるドイツの伝統的なパン。
-      </p>
-      <p class="price">¥250</p>
+        <p class="de-text">
+          Ein traditionelles deutsches Brot mit bernsteinfarbener Farbe und Steinsalz.
+        </p>
+        <p>飴色に光る、岩塩が小麦の風味を引き立てるドイツの伝統パン。</p>
+        <p class="price">¥250</p>
+      </div>
     </div>
-  </div>
 
-  <!-- 2 -->
-  <div class="product-card">
-    <img src="pan3.png" alt="ケーゼブレッツェル">
-    <div class="product-info">
-      <h2>
-        <span class="de">Käsebrezel</span><br>
+    <div class="product-card">
+      <img src="pan3.png" alt="ケーゼブレッツェル">
+      <div class="product-info">
+        <span class="de">Käsebrezel</span>
         <span class="jp-title">ケーゼブレッツェル</span>
-      </h2>
-      <p>
-        <span class="de-text">
-          Eine klassische Brezel, überbacken mit einer Mischung aus Emmentaler, Gouda und Cheddar. Ein Stück genügt, um satt zu werden.
-        </span><br>
-        定番のプレッツェルに、エメンタール、ゴーダ、チェダーチーズをブレンドしたチーズをのせて焼いてあります。１個でも十分満足できるパン。
-      </p>
-      <p class="price">¥350</p>
+        <p class="de-text">
+          Eine klassische Brezel mit geschmolzenem Käse.
+        </p>
+        <p>チーズをのせて焼き上げた定番ブレッツェル。</p>
+        <p class="price">¥350</p>
+      </div>
     </div>
-  </div>
 
-  <!-- 3 -->
-  <div class="product-card">
-    <img src="pan4.png" alt="ツヴィーベルクーヘン">
-    <div class="product-info">
-      <h2>
-        <span class="de">Zwiebelkuchen</span><br>
+    <div class="product-card">
+      <img src="pan4.png" alt="ツヴィーベルクーヘン">
+      <div class="product-info">
+        <span class="de">Zwiebelkuchen</span>
         <span class="jp-title">ツヴィーベルクーヘン</span>
-      </h2>
-      <p>
-        <span class="de-text">
-          Dieses quicheähnliche Brot ist eine perfekte Kombination aus reichlich Zwiebeln, Sauerrahm und Speck und ist damit ein Gericht, das in Deutschland den Herbst ankündigt.
-        </span><br>
-        キッシュのようなパンです。たっぷりの玉ねぎとサワークリーム・ベーコンの相性が最高の、ドイツの秋を知らせてくれる風物詩。
-      </p>
-      <p class="price">¥350</p>
+        <p class="de-text">
+          Zwiebeln, Sauerrahm und Speck — ein deutscher Herbstklassiker.
+        </p>
+        <p>玉ねぎ・サワークリーム・ベーコンのドイツ定番。</p>
+        <p class="price">¥350</p>
+      </div>
     </div>
+
+  </div>
+</div>
+
+<!-- ======================
+     甘い系
+====================== -->
+
+<div class="menu-layout">
+
+  <div class="menu-side-title">
+    <h1 class="menu-title">
+      << Süßer Typ >><br>
+      <span class="jp-sub">-甘い系（1日1種類）-</span>
+    </h1>
   </div>
 
-  <!-- 4 -->
-  <div class="product-card">
-    <img src="pan2.png" alt="ブレッツェルサンド">
-    <div class="product-info">
-      <h2>
-        <span class="de">Brezeln mit Füllung</span><br>
-        <span class="jp-title">ブレッツェルサンド</span>
-      </h2>
-      <p>
-        <span class="de-text">
-          Eine klassische Brezel, halbiert und gefüllt mit Räucherlachs und Käse.
-        </span><br>
-        定番のブレッツェルを半分に切りスモークサーモンやチーズを挟んだサンドイッチ。
-      </p>
-      <p class="price">¥400</p>
-    </div>
-  </div>
+  <div class="menu-container">
 
-<h1 class="menu-title">
-  << Bsüßer Typ(Eine Sorte pro Tag) >><br>
-  <span class="jp-sub">-甘い系-</span>
-</h1>
-
-<div class="product-card">
-    <img src="lecker-lecker-Jingerbrezel 日本橋.png" alt="ジンジャーアイシングがけブレッツェル">
-    <div class="product-info">
-      <h2>
-        <span class="de">Brezel mit Ingwer-Zuckerguss</span><br>
+    <div class="product-card">
+      <img src="lecker-lecker-Jingerbrezel 日本橋.png" alt="ジンジャーアイシングブレッツェル">
+      <div class="product-info">
+        <span class="de">Brezel mit Ingwer-Zuckerguss</span>
         <span class="jp-title">ジンジャーアイシングがけブレッツェル</span>
-      </h2>
-      <p>
-        <span class="de-text">
-         Eine süße Brezel mit Ingwerglasur. Perfekt als Snack oder leichte Mahlzeit...
-        </span><br>
-        ショウガの効いたアイシングがかかった甘いブレッツェル。おやつにも軽い食事にも、、、
-      </p>
-      <p class="price">¥300</p>
+        <p class="de-text">
+          Süße Brezel mit Ingwerglasur.
+        </p>
+        <p>ショウガの効いたアイシングをかけた甘いブレッツェル。</p>
+        <p class="price">¥300</p>
+      </div>
     </div>
+
   </div>
-
 </div>
 
-
-</div>
-  
 <footer>
   © 2026 Lecker Lecker Bäckerei
 </footer>
-  
+
 </body>
 </html>
