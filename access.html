@@ -2,11 +2,15 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+
 <title>アクセス | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== 全体 ===== */
+
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -15,26 +19,55 @@ body {
     text-align: center;
 }
 
+/* ===== HEADER（金帯） ===== */
+
 header {
     background-color: #c6a436;
     color: white;
     padding: 40px 0;
 }
 
-h1 {
+header h1 {
     font-size: 40px;
     margin: 0;
 }
 
-section {
-    padding: 60px 20px;
+header p {
+    margin-top: 10px;
 }
 
-footer {
+/* ===== ナビゲーション ===== */
+
+nav {
+    text-align: center;
+    margin: 25px 0 40px;
+}
+
+.menu-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+
+    background: white;
+    padding: 14px 22px;
+    margin: 8px;
+
+    border-radius: 10px;
+    border: 2px solid #c6a436;
+
+    transition: 0.3s;
+}
+
+.menu-button:hover {
     background-color: #c6a436;
     color: white;
-    padding: 20px 0;
-    font-size: 14px;
+    transform: translateY(-3px);
+}
+
+/* ===== メイン ===== */
+
+section {
+    padding: 60px 20px;
 }
 
 iframe {
@@ -44,61 +77,86 @@ iframe {
     border: 0;
     margin-top: 20px;
 }
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #c6a436;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
+
 <header>
     <h1>Anfahrt</h1>
     <p>-アクセス-</p>
 </header>
-<nav style="margin-top: 20px;">
- <a href="menu.html" class="menu-button">
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+
+<a href="menu.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
-  Vorstellung</span><br>
+    Vorstellung
+  </span><br>
   <span>-商品紹介-</span>
-</a>  
-  
- <a href="recruit.html" class="menu-button">
+</a>
+
+<a href="recruit.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
-  Stellenangebot</span><br>
+    Stellenangebot
+  </span><br>
   <span>-ドイツパン職人募集-</span>
 </a>
 
-
-  <a href="access.html" class="menu-button">
+<a href="access.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
-  Anfahrt</span><br>
+    Anfahrt
+  </span><br>
   <span>-アクセス-</span>
 </a>
 
-
-  <a href="news.html" class="menu-button">
+<a href="news.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
-  Öffnungszeiten・Nachrichten</span><br>
+    Öffnungszeiten・Nachrichten
+  </span><br>
   <span>-営業時間・お知らせ-</span>
 </a>
-</nav>
-<section>
-    <p style="margin-bottom:20px;">
-        Lecker Lecker<br>
-        〒103-0000 東京都中央区日本橋<br>
-        ✆080-1111-22222
-    </p>
 
-    <div>
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.3248775716895!2d139.77275781098155!3d35.68562516258515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889558bea7489%3A0xb736a8620645c5d3!2z5pel5pys5qmL5LiJ6LaK5pys5bqX!5e0!3m2!1sja!2sjp!4v1771390400446!5m2!1sja!2sjp"
-        allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
+</nav>
+
+<!-- ===== CONTENT ===== -->
+
+<section>
+
+<p style="margin-bottom:20px;">
+Lecker Lecker<br>
+〒103-0000 東京都中央区日本橋<br>
+✆080-1111-2222
+</p>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.3248775716895!2d139.77275781098155!3d35.68562516258515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889558bea7489%3A0xb736a8620645c5d3!2z5pel5pys5qmL5LiJ6LaK5pys5bqX!5e0!3m2!1sja!2sjp!4v1771390400446!5m2!1sja!2sjp"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
 </section>
 
+<!-- ===== FOOTER ===== -->
+
 <footer>
-    © 2026 Lecker Lecker Bäckerei
+© 2026 Lecker Lecker Bäckerei
 </footer>
 
 </body>
-
 </html>
