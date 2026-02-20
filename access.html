@@ -51,8 +51,14 @@ nav {
     gap: 20px;              /* ← ★ボタンの間隔 */
     flex-wrap: wrap;        /* ← スマホで折り返し */
 }
+    nav {
+    display: flex;
+    justify-content: center; /* 真ん中寄せ */
+    gap: 20px;                /* ← ボタン間隔 */
+    margin: 20px 0;
+    flex-wrap: wrap;          /* スマホで自動改行 */
+}
 .menu-button {
-    display: inline-block;
     padding: 14px 28px;
     background-color: #D4AF37;
     color: white;
@@ -130,12 +136,14 @@ footer {
 
 <!-- ===== NAVIGATION ===== -->
 
+<nav>
+
 <a href="index.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
     Startseite
   </span><br>
   <span>-トップ-</span>
-</a><nav>
+</a>
 
 <a href="menu.html" class="menu-button">
   <span style="font-size:20px; font-weight:700;">
