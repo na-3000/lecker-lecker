@@ -40,7 +40,7 @@ header p {
     margin-top: 10px;
 }
 
-/* ===== ナビゲーション（access.htmlと統一） ===== */
+/* ===== ナビ ===== */
 
 nav {
     display: flex;
@@ -64,7 +64,7 @@ nav {
     background-color: #b8962e;
 }
 
-/* ===== 横並びレイアウト ===== */
+/* ===== レイアウト ===== */
 
 .menu-layout {
     display: flex;
@@ -73,8 +73,6 @@ nav {
     margin: 60px auto;
     align-items: flex-start;
 }
-
-/* 左タイトル */
 
 .menu-side-title {
     flex: 0 0 260px;
@@ -93,10 +91,9 @@ nav {
 
 .jp-sub {
     font-size: 0.6em;
-    font-weight: normal;
 }
 
-/* ===== メニュー ===== */
+/* ===== 商品 ===== */
 
 .menu-container {
     flex: 1;
@@ -128,8 +125,6 @@ nav {
 }
 
 .product-info {
-    display: flex;
-    flex-direction: column;
     text-align: left;
 }
 
@@ -189,14 +184,12 @@ footer {
 
 <body>
 
-<!-- ===== HEADER ===== -->
-
 <header>
   <h1>Einführung</h1>
   <p>-商品紹介-</p>
 </header>
 
-<!-- ===== NAVIGATION ===== -->
+<!-- ===== ナビ ===== -->
 
 <nav>
 
@@ -224,12 +217,107 @@ Anfahrt<br><span>-アクセス-</span>
 </nav>
 
 <!-- ======================
-     ここから下はナーちゃん元コードそのまま
+     甘くない系
 ====================== -->
 
-（※この下は今の menu 内容をそのまま残してOK）
+<div class="menu-layout">
 
-<!-- 省略せずそのまま続く -->
+<div class="menu-side-title">
+<h1 class="menu-title">
+&lt;&lt; Bretzel et al. &gt;&gt;<br>
+<span class="jp-sub">-甘くない系-</span>
+</h1>
+</div>
+
+<div class="menu-container">
+
+<div class="product-card">
+<img src="lecker-brezel 日本橋.png">
+<div class="product-info">
+<span class="de">Brezel</span><br>
+<span class="jp-title">ブレッツェル</span>
+<p class="de-text">Ein traditionelles deutsches Brot mit bernsteinfarbener Farbe und Steinsalz.</p>
+<p>飴色に光る、岩塩が小麦の風味を引き立てるドイツの伝統パン。</p>
+<p class="price">¥250</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="pan3.png">
+<div class="product-info">
+<span class="de">Käsebrezel</span><br>
+<span class="jp-title">ケーゼブレッツェル</span>
+<p class="de-text">Eine klassische Brezel mit geschmolzenem Käse.</p>
+<p>チーズをのせて焼き上げた定番ブレッツェル。</p>
+<p class="price">¥350</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="pan4.png">
+<div class="product-info">
+<span class="de">Zwiebelkuchen</span><br>
+<span class="jp-title">ツヴィーベルクーヘン</span>
+<p class="de-text">Eine deutsche Spezialität mit Zwiebeln und Sauerrahm.</p>
+<p>玉ねぎとサワークリームの相性が抜群のドイツ名物。</p>
+<p class="price">¥400</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="lecker-lecker-Belegte Brezel 日本橋.png">
+<div class="product-info">
+<span class="de">Belegte Brezel</span><br>
+<span class="jp-title">ブレッツェルサンド</span>
+<p class="de-text">Ein klassisches Brezelsandwich gefüllt mit Käse und Ei.</p>
+<p>定番のブレッツェルに具材を挟んだサンド。</p>
+<p class="price">¥400</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ======================
+     甘い系
+====================== -->
+
+<div class="menu-layout">
+
+<div class="menu-side-title">
+<h1 class="menu-title">
+&lt;&lt; Süßer Typ &gt;&gt;<br>
+(Ein Typ pro Tag)<br>
+<span class="jp-sub">-甘い系(1日1種類)-</span>
+</h1>
+</div>
+
+<div class="menu-container">
+
+<div class="product-card">
+<img src="lecker-lecker-Jingerbrezel 日本橋.png">
+<div class="product-info">
+<span class="de">Brezel mit Ingwer-Zuckerguss</span><br>
+<span class="jp-title">ジンジャーアイシングブレッツェル</span>
+<p class="de-text">Eine Brezel mit Ingwer-Glasur.</p>
+<p>生姜の辛味と甘さが調和したブレッツェル。</p>
+<p class="price">¥300</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="lecker-lecker-Blaubeerschnitte 日本橋.png">
+<div class="product-info">
+<span class="de">Blaubeerschnitte</span><br>
+<span class="jp-title">ブルーベリーシュニット</span>
+<p class="de-text">Blaubeeren und saure Sahne bilden die perfekte Kombination.</p>
+<p>ブルーベリーとサワークリームの王道ドイツ菓子。</p>
+<p class="price">¥400</p>
+</div>
+</div>
+
+</div>
+</div>
 
 <footer>
 © 2026 Lecker Lecker Bäckerei
