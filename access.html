@@ -3,13 +3,19 @@
 <head>
 <meta charset="UTF-8">
 
-<title>アクセス | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房</title>
+<title>
+アクセス | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房
+</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== 全体 ===== */
+/* ===== 基本設定 ===== */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -17,9 +23,6 @@ body {
     background-color: #ffffff;
     color: #333;
     text-align: center;
-    html {
-    scroll-behavior: smooth;
-}
 }
 
 /* ===== HEADER（金帯） ===== */
@@ -41,66 +44,28 @@ header p {
 
 /* ===== ナビゲーション ===== */
 
-/* ===== ナビゲーション ===== */
-
 nav {
-    margin-top: 20px;
-
-    display: flex;          /* ← 横並びにする */
-    justify-content: center;/* ← 中央寄せ */
-    gap: 20px;              /* ← ★ボタンの間隔 */
-    flex-wrap: wrap;        /* ← スマホで折り返し */
-}
-    nav {
     display: flex;
-    justify-content: center; /* 真ん中寄せ */
-    gap: 20px;                /* ← ボタン間隔 */
+    justify-content: center;
+    gap: 20px;
     margin: 20px 0;
-    flex-wrap: wrap;          /* スマホで自動改行 */
+    flex-wrap: wrap;
 }
-/* ===== メニューボタン（装飾フレーム版） ===== */
 
 .menu-button {
-    display: inline-block;
-    position: relative;
-
     padding: 14px 28px;
+    background-color: #D4AF37;
+    color: white;
     text-decoration: none;
-
-    color: white;              /* ← 白文字固定 */
     font-weight: 600;
     text-align: center;
-
-    background-color: #D4AF37; /* ← 中の金色 */
-
     transition: 0.3s;
 }
 
-/* 枠を描く（疑似要素） */
-.menu-button::before {
-    content: "";
-    position: absolute;
-    inset: -6px; /* 枠の外側余白 */
-
-    border: 2px solid #d8c79a;
-    border-radius: 14px;
-
-    pointer-events: none;
-}
-
-/* ホバー */
 .menu-button:hover {
     background-color: #b8962e;
-    transform: translateY(-2px);
-
-    /* ===== 現在ページ ===== */
-
-.menu-button.active {
-    background-color: #b8962e;
-    pointer-events: none;
-    cursor: default;
 }
-    
+
 /* ===== メイン ===== */
 
 section {
@@ -125,18 +90,21 @@ footer {
     margin-top: 60px;
 }
 
-    /* ===== TOPへ戻る ===== */
+/* ===== TOPへ戻るボタン ===== */
 
 .back-to-top {
     position: fixed;
     right: 25px;
     bottom: 25px;
+
     background-color: #c6a436;
     color: white;
     text-decoration: none;
+
     padding: 12px 18px;
     font-size: 14px;
     font-weight: 600;
+
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -145,6 +113,7 @@ footer {
     background-color: #b8962e;
     transform: translateY(-3px);
 }
+
 </style>
 </head>
 
@@ -162,38 +131,28 @@ footer {
 <nav>
 
 <a href="index.html" class="menu-button">
-  <span style="font-size:20px; font-weight:700;">
-    Startseite
-  </span><br>
-  <span>-トップ-</span>
+    <span style="font-size:20px; font-weight:700;">Startseite</span><br>
+    <span>-トップ-</span>
 </a>
 
 <a href="menu.html" class="menu-button">
-  <span style="font-size:20px; font-weight:700;">
-    Vorstellung
-  </span><br>
-  <span>-商品紹介-</span>
+    <span style="font-size:20px; font-weight:700;">Vorstellung</span><br>
+    <span>-商品紹介-</span>
 </a>
 
 <a href="recruit.html" class="menu-button">
-  <span style="font-size:20px; font-weight:700;">
-    Stellenangebot
-  </span><br>
-  <span>-ドイツパン職人募集-</span>
+    <span style="font-size:20px; font-weight:700;">Stellenangebot</span><br>
+    <span>-ドイツパン職人募集-</span>
 </a>
 
-<a href="access.html" class="menu-button active">
-  <span style="font-size:20px; font-weight:700;">
-    Anfahrt
-  </span><br>
-  <span>-アクセス-</span>
+<a href="access.html" class="menu-button">
+    <span style="font-size:20px; font-weight:700;">Anfahrt</span><br>
+    <span>-アクセス-</span>
 </a>
 
 <a href="news.html" class="menu-button">
-  <span style="font-size:20px; font-weight:700;">
-    Öffnungszeiten・Nachrichten
-  </span><br>
-  <span>-営業時間・お知らせ-</span>
+    <span style="font-size:20px; font-weight:700;">Öffnungszeiten・Nachrichten</span><br>
+    <span>-営業時間・お知らせ-</span>
 </a>
 
 </nav>
