@@ -47,6 +47,20 @@ header{
     position:relative;
 }
 
+    header {
+    background: linear-gradient(135deg, #D4AF37, #B8962E);
+    color: white;
+    padding: 40px 0;
+    min-height: 120px;   /* ← heightやめる */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-4px); /* ← 視覚補正 */
+}
+    
 /* 外枠 */
 header::before{
     content:"";
