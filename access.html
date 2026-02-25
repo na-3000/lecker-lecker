@@ -51,15 +51,15 @@ section {
 /* ===== HEADER（金帯） ===== */
 
 header {
-    background-color: #c6a436;
+    background: linear-gradient(135deg, #D4AF37, #B8962E);
     color: white;
     padding: 40px 0;
-    height: 120px;          /* 帯の高さ */
-    background: #f5f1ea;    /* 帯の色 */
+    height: 120px;
 
     display: flex;
-    justify-content: center; /* 横中央 */
-    align-items: center;     /* 縦中央 ←これが重要！ */
+    flex-direction: column; /* ←追加（重要） */
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
@@ -151,11 +151,6 @@ nav {
 }
 
 /* ===== メイン ===== */
-
-section {
-    padding: 60px 20px;
-}
-
 iframe {
     width: 100%;
     max-width: 600px;
