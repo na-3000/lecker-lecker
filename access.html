@@ -57,6 +57,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     transform: translateY(-4px);
 
@@ -65,8 +66,8 @@ header{
 }
     
 /* 外枠 */
-header::before,
-footer::before {
+header::after,
+footer::after {
     content:"";
     position:absolute;
     inset:12px;
@@ -265,6 +266,7 @@ footer {
 
     /* 上の帯と統一 */
     box-shadow: 0 -6px 18px rgba(0,0,0,0.12);
+    position: relative;
 }
 
 </style>
