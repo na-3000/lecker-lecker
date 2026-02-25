@@ -24,7 +24,30 @@ body {
     color: #333;
     text-align: center;
 }
+/* ===== ヨーロッパ菓子店レイアウト ===== */
 
+.content {
+    max-width: 760px;   /* ← 魔法の数字 */
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+/* 見出しの呼吸 */
+h2 {
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* 文章の空気感 */
+p {
+    line-height: 2.1;
+    margin-bottom: 28px;
+}
+
+/* セクション間の余白 */
+section {
+    padding: 90px 20px;
+}
 /* ===== HEADER（金帯） ===== */
 
 header {
@@ -39,7 +62,8 @@ header h1 {
 }
 
 header p {
-    margin-top: 10px;
+    opacity: 0.85;
+    letter-spacing: 2px;
 }
 
 /* ===== ナビゲーション ===== */
@@ -214,6 +238,7 @@ footer {
 <!-- ===== CONTENT ===== -->
 
 <section>
+  <div class="content">
 
 <p style="margin-bottom:20px;">
 Lecker Lecker<br>
@@ -227,6 +252,7 @@ allowfullscreen=""
 loading="lazy">
 </iframe>
 
+  </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
