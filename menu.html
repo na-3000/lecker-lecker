@@ -63,6 +63,13 @@ nav {
 .menu-button:hover {
     background-color: #b8962e;
 }
+    /* ===== 現在ページ ===== */
+
+.menu-button.active {
+    background-color: #b8962e;
+    pointer-events: none;
+    cursor: default;
+}
 
 /* ===== レイアウト ===== */
 
@@ -197,7 +204,7 @@ footer {
 Startseite<br><span>-トップ-</span>
 </a>
 
-<a href="menu.html" class="menu-button">
+<a href="menu.html" class="menu-button active">
 Vorstellung<br><span>-商品紹介-</span>
 </a>
 
