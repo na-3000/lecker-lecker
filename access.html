@@ -58,27 +58,41 @@ nav {
     margin: 20px 0;
     flex-wrap: wrap;          /* スマホで自動改行 */
 }
+/* ===== メニューボタン（装飾フレーム版） ===== */
+
 .menu-button {
     display: inline-block;
-    padding: 14px 36px;
-    font-size: 16px;
+    position: relative;
+
+    padding: 14px 28px;
     text-decoration: none;
-    color: #333;
 
-    /* 中の色 */
-    background-color: #f8f5ea;
+    color: white;              /* ← 白文字固定 */
+    font-weight: 600;
+    text-align: center;
 
-    /* 枠画像を使う */
-    border: 18px solid transparent;
-    border-image: url("images/frame.png") 80 stretch;
+    background-color: #D4AF37; /* ← 中の金色 */
 
-    font-family: 'Playfair Display', serif;
     transition: 0.3s;
 }
 
-.menu-button:hover {
-    transform: translateY(-2px);
+/* 枠を描く（疑似要素） */
+.menu-button::before {
+    content: "";
+    position: absolute;
+    inset: -6px; /* 枠の外側余白 */
+
+    border: 2px solid #d8c79a;
+    border-radius: 14px;
+
+    pointer-events: none;
 }
+
+/* ホバー */
+.menu-button:hover {
+    background-color: #b8962e;
+    transform: translateY(-2px);
+
     /* ===== 現在ページ ===== */
 
 .menu-button.active {
