@@ -122,14 +122,20 @@ section{
     padding:40px 20px 80px;
     max-width: 760px;
     margin: 0 auto;
-    text-align:left;
+    text-align:center;
 }
 
 section h2{
     font-size:24px;
     margin-bottom:10px;
 }
-
+    
+section h2, section h3 {
+    margin-top: 0;     /* 上の余白をなくす */
+    margin-bottom: 4px; /* 下の余白を小さく */
+    line-height: 1.2;  /* 行の高さを詰める */
+}
+    
 section p{
     line-height:2;
     margin-bottom:24px;
@@ -244,11 +250,11 @@ Anfahrt<br><span>-アクセス-</span>
 </a>
 </nav>
 
-<section>
+<section class="center-text">
 <!-- 営業時間 -->
 <div class="hours">
 <h2>Öffnungszeiten</h2>
-<h3>営業時間</h3>
+<h3>=営業時間=</h3>
     
 <p>平日：10:00〜19:00<br>
 土日祝：10:00〜18:00</p>
@@ -256,7 +262,7 @@ Anfahrt<br><span>-アクセス-</span>
 
 <!-- お知らせ -->
 <h2>Nachrichten</h2>
-<h3>営業時間</h3>
+<h3>=お知らせ=</h3>
 <h2>2026/02/25</h2>
 <p>新しい商品の情報を更新しました。</p>
 
