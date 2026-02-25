@@ -8,20 +8,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 /* ===== 全体 ===== */
 html { scroll-behavior: smooth; }
 body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background: #ffffff;
-    color: #4A2E1F;
-    text-align: center;
+    margin:0;
+    font-family:'Playfair Display', serif;
+    background:#ffffff;
+    color:#4A2E1F;
+    text-align:center;
 }
 
 /* ===== HEADER ===== */
 header {
-    padding:26px 0 22px; /* ニュースページと同じ高さ */
+    padding:26px 0 22px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -54,7 +53,7 @@ header::after{
 
 header h1{
     margin:0;
-    font-size:46px; /* ニュースページと同じ */
+    font-size:46px;
     line-height:1;
     letter-spacing:2px;
     transform:translateY(3px);
@@ -62,7 +61,7 @@ header h1{
 
 header p{
     margin:6px 0 0;
-    font-size:15px; /* ニュースページと同じ */
+    font-size:15px;
     letter-spacing:2px;
     opacity:.9;
 }
@@ -76,19 +75,33 @@ nav{
     flex-wrap:wrap;
 }
 
-.menu-button{
+/* ===== メニューボタン完全統一 ===== */
+.menu-button {
     position:relative;
     display:inline-block;
-    padding:14px 30px;
+    padding:14px 30px; /* 上下・左右の余白統一 */
     text-decoration:none;
     text-align:center;
     color:white;
     font-weight:600;
+    font-size:20px; /* ボタン文字サイズ統一 */
     letter-spacing:1px;
     background:linear-gradient(180deg,#e2c45a 0%,#d4af37 40%,#c49b2a 100%);
     transition:.3s;
+    line-height:1.2; /* 行間を統一 */
 }
 
+.menu-button span {
+    display:block;
+}
+
+.menu-button span:last-child {
+    font-size:14px; /* 下のサブ文字統一 */
+    margin-top:4px;
+    opacity:0.8;
+}
+
+/* 枠 */
 .menu-button::before{
     content:"";
     position:absolute;
@@ -111,6 +124,7 @@ nav{
     transform:translateY(-3px);
 }
 
+/* 現在ページ */
 .menu-button.active{
     background: linear-gradient(180deg,#d8bb4f 0%,#caa534 50%,#b8932a 100%);
     cursor: default;
@@ -221,27 +235,27 @@ footer::after{
 <!-- NAV -->
 <nav>
 <a href="index.html" class="menu-button">
-<span style="font-size:20px;font-weight:700;">Startseite</span><br>
+<span>Startseite</span>
 <span>-トップ-</span>
 </a>
 
 <a href="menu.html" class="menu-button">
-<span style="font-size:20px;font-weight:700;">Vorstellung</span><br>
+<span>Vorstellung</span>
 <span>-商品紹介-</span>
 </a>
 
 <a class="menu-button active">
-<span style="font-size:20px;font-weight:700;">Stellenangebot</span><br>
+<span>Stellenangebot</span>
 <span>-ドイツパン職人募集-</span>
 </a>
 
 <a href="access.html" class="menu-button">
-<span style="font-size:20px;font-weight:700;">Anfahrt</span><br>
+<span>Anfahrt</span>
 <span>-アクセス-</span>
 </a>
 
 <a href="news.html" class="menu-button">
-<span style="font-size:20px;font-weight:700;">Öffnungszeiten・Nachrichten</span><br>
+<span>Öffnungszeiten・Nachrichten</span>
 <span>-営業時間・お知らせ-</span>
 </a>
 </nav>
@@ -301,8 +315,6 @@ nahara@ezweb.ne.jp
 © 2026 Lecker Lecker Bäckerei
 <a href="#" class="back-to-top">↑ TOP</a>
 </footer>
-
-<a href="#" class="back-to-top">↑ TOP</a>
 
 </body>
 </html>
