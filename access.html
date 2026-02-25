@@ -7,294 +7,279 @@
 アクセス | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房
 </title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== 基本設定 ===== */
+/* ===== 基本 ===== */
 
-html {
-    scroll-behavior: smooth;
+html { scroll-behavior:smooth; }
+
+body{
+    margin:0;
+    font-family:'Playfair Display',serif;
+    background:#ffffff;
+    color:#4A2E1F;
+    text-align:center;
 }
 
-body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #FFFFFF;
-  color: #4A2E1F;
-    text-align: center;
-}
-/* ===== ヨーロッパ菓子店レイアウト ===== */
+/* =============================
+   HEADER（メニューボタン統一版）
+============================= */
 
-.content {
-    max-width: 760px;   /* ← 魔法の数字 */
-    margin: 0 auto;
-    padding: 80px 24px;
-}
+header{
+    height:140px;
 
-/* 見出しの呼吸 */
-h2 {
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-/* 文章の空気感 */
-p {
-    line-height: 2.1;
-    margin-bottom: 28px;
+    color:white;
+
+    background:linear-gradient(
+        180deg,
+        #e2c45a 0%,
+        #d4af37 50%,
+        #b8962e 100%
+    );
+
+    position:relative;
 }
 
-/* セクション間の余白 */
-section {
-    padding: 90px 20px;
-}
-/* ===== HEADER（金帯） ===== */
-
-header {
-    background: linear-gradient(135deg, #D4AF37, #B8962E);
-    color: white;
-    padding: 40px 0;
-    height: 120px;
-
-    display: flex;
-    flex-direction: column; /* ←追加（重要） */
-    justify-content: center;
-    align-items: center;
+/* 外枠 */
+header::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:2px solid #e8d79b;
+    border-radius:18px;
+    pointer-events:none;
 }
 
-header h1 {
-    margin: 0;
-    line-height: 1.1;
+/* 内側ライン */
+header::after{
+    content:"";
+    position:absolute;
+    inset:20px;
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:12px;
+    pointer-events:none;
 }
 
-header p {
-    margin-top: 4px;
-    letter-spacing: 2px;
-    opacity: 0.85;
-    font-size: 14px;
+header h1{
+    margin:0;
+    font-size:46px;   /* ← 少し大きく */
+    line-height:1.1;
+    letter-spacing:2px;
 }
 
-/* ===== ナビゲーション ===== */
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+header p{
+    margin-top:6px;
+    font-size:15px;
+    letter-spacing:2px;
+    opacity:.9;
 }
 
-/* =========================
-   Lecker Lecker フレームボタン
-========================= */
+/* =============================
+   ナビゲーション
+============================= */
 
-.menu-button {
-    position: relative;
-    display: inline-block;
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:20px 0 10px; /* ← 下を縮めた */
+    flex-wrap:wrap;
+}
 
-    padding: 14px 30px;
-    text-decoration: none;
-    text-align: center;
+/* ===== メニューボタン ===== */
 
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
+.menu-button{
+    position:relative;
+    display:inline-block;
 
-    background: linear-gradient(
+    padding:14px 30px;
+    text-decoration:none;
+    text-align:center;
+
+    color:white;
+    font-weight:600;
+    letter-spacing:1px;
+
+    background:linear-gradient(
         180deg,
         #e2c45a 0%,
         #d4af37 40%,
         #c49b2a 100%
     );
 
-    border: none;
-    overflow: hidden;
-
-    transition: all 0.3s ease;
+    transition:.3s;
 }
 
-/* 外側クラシック枠 */
-.menu-button::before {
-    content: "";
-    position: absolute;
-    inset: -6px;
-
-    border: 2px solid #e8d79b;
-    border-radius: 16px;
-
-    box-shadow:
-        0 0 0 2px rgba(255,255,255,0.25) inset,
-        0 4px 10px rgba(0,0,0,0.15);
-
-    pointer-events: none;
+/* 枠 */
+.menu-button::before{
+    content:"";
+    position:absolute;
+    inset:-6px;
+    border:2px solid #e8d79b;
+    border-radius:16px;
+    pointer-events:none;
 }
 
-/* 内側ライン（高級感の核心） */
-.menu-button::after {
-    content: "";
-    position: absolute;
-    inset: 4px;
-
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 10px;
-
-    pointer-events: none;
+.menu-button::after{
+    content:"";
+    position:absolute;
+    inset:4px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:10px;
+    pointer-events:none;
 }
 
-/* ホバー */
-.menu-button:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(
+.menu-button:hover{
+    transform:translateY(-3px);
+}
+
+/* ===== 現在ページ（押せない） ===== */
+
+.menu-button.active{
+    background:#8c6a1f;
+    cursor:default;
+    pointer-events:none;
+}
+
+/* =============================
+   コンテンツ
+============================= */
+
+section{
+    padding:40px 20px 80px; /* ← 上余白を縮めた */
+}
+
+.content{
+    max-width:760px;
+    margin:0 auto;
+}
+
+/* 文章 */
+
+p{
+    line-height:2;
+    margin-bottom:24px;
+}
+
+iframe{
+    width:100%;
+    max-width:600px;
+    height:350px;
+    border:0;
+}
+
+/* =============================
+   TOPボタン（統一版）
+============================= */
+
+.back-to-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    padding:14px 28px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+
+    background:linear-gradient(
         180deg,
-        #f0d97a 0%,
-        #d4af37 50%,
-        #b8962e 100%
+        #e2c45a 0%,
+        #d4af37 40%,
+        #c49b2a 100%
     );
+
+    transition:.3s;
 }
 
-/* ===== メイン ===== */
-iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 350px;
-    border: 0;
-    margin-top: 20px;
+.back-to-top::before{
+    content:"";
+    position:absolute;
+    inset:-6px;
+    border:2px solid #e8d79b;
+    border-radius:16px;
 }
 
-/* ===== FOOTER ===== */
-
-footer {
-    background-color: #c6a436;
-    color: white;
-    padding: 20px 0;
-    font-size: 14px;
-    margin-top: 60px;
+.back-to-top::after{
+    content:"";
+    position:absolute;
+    inset:4px;
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:10px;
 }
 
-/* ===== TOPへ戻るボタン ===== */
-
-/* ===== TOPへ戻る（メニューボタン統一版） ===== */
-
-.back-to-top {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-
-    background-color: #D4AF37;
-    color: #ffffff;
-    text-decoration: none;
-
-    padding: 14px 28px;
-    font-weight: 600;
-    font-family: 'Playfair Display', serif;
-
-    border: 2px solid #c6a436;   /* ← 枠 */
-    border-radius: 0;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-
-    transition: all 0.3s ease;
-    z-index: 999;
+.back-to-top:hover{
+    transform:translateY(-3px);
 }
 
-/* ホバー（メニューと同じ動き） */
-.back-to-top:hover {
-    background-color: #b8962e;
-    transform: translateY(-3px);
-}
-/* =====================================
-   Lecker Lecker European Layout Set
-   （ヨーロッパ菓子店余白デザイン）
-===================================== */
+/* =============================
+   FOOTER
+============================= */
 
-/* スムーズスクロール */
-html {
-    scroll-behavior: smooth;
+footer{
+    background:#c6a436;
+    color:white;
+    padding:24px 0;
+    margin-top:60px;
 }
 
-/* ===== 中央余白コンテナ ===== */
-.content {
-    max-width: 760px;      /* ← 欧州菓子店の黄金幅 */
-    margin: 0 auto;
-    padding: 80px 24px;
-}
-
-/* ===== セクション余白 ===== */
-section {
-    padding: 90px 20px;
-}
-
-/* ===== 文章の空気感 ===== */
-p {
-    line-height: 2.1;
-    margin-bottom: 28px;
-}
-
-/* ===== 見出し余白 ===== */
-h2 {
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-/* ===== サブタイトル上品化 ===== */
-header p {
-    opacity: 0.85;
-    letter-spacing: 2px;
-}
-
-/* ===== フッター余白 ===== */
-footer {
-    margin-top: 80px;
-}
 </style>
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 
 <header>
-    <h1>Anfahrt</h1>
-    <p>-アクセス-</p>
+<h1>Anfahrt</h1>
+<p>-アクセス-</p>
 </header>
 
-<!-- ===== NAVIGATION ===== -->
+<!-- NAV -->
 
 <nav>
 
 <a href="index.html" class="menu-button">
-    <span style="font-size:20px; font-weight:700;">Startseite</span><br>
-    <span>-トップ-</span>
+<span style="font-size:20px;font-weight:700;">Startseite</span><br>
+<span>-トップ-</span>
 </a>
 
 <a href="menu.html" class="menu-button">
-    <span style="font-size:20px; font-weight:700;">Vorstellung</span><br>
-    <span>-商品紹介-</span>
+<span style="font-size:20px;font-weight:700;">Vorstellung</span><br>
+<span>-商品紹介-</span>
 </a>
 
 <a href="recruit.html" class="menu-button">
-    <span style="font-size:20px; font-weight:700;">Stellenangebot</span><br>
-    <span>-ドイツパン職人募集-</span>
+<span style="font-size:20px;font-weight:700;">Stellenangebot</span><br>
+<span>-ドイツパン職人募集-</span>
 </a>
 
-<a href="access.html" class="menu-button">
-    <span style="font-size:20px; font-weight:700;">Anfahrt</span><br>
-    <span>-アクセス-</span>
+<!-- ★ 今のページ -->
+<a class="menu-button active">
+<span style="font-size:20px;font-weight:700;">Anfahrt</span><br>
+<span>-アクセス-</span>
 </a>
 
 <a href="news.html" class="menu-button">
-    <span style="font-size:20px; font-weight:700;">Öffnungszeiten・Nachrichten</span><br>
-    <span>-営業時間・お知らせ-</span>
+<span style="font-size:20px;font-weight:700;">Öffnungszeiten・Nachrichten</span><br>
+<span>-営業時間・お知らせ-</span>
 </a>
 
 </nav>
 
-<!-- ===== CONTENT ===== -->
+<!-- CONTENT -->
 
 <section>
-  <div class="content">
-      
-<p style="margin-bottom:20px;">
+<div class="content">
+
+<p>
 Lecker Lecker<br>
 〒103-0000 東京都中央区日本橋<br>
 ✆080-1111-2222
@@ -302,19 +287,17 @@ Lecker Lecker<br>
 
 <iframe
 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.3248775716895!2d139.77275781098155!3d35.68562516258515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889558bea7489%3A0xb736a8620645c5d3!2z5pel5pys5qmL5LiJ6LaK5pys5bqX!5e0!3m2!1sja!2sjp!4v1771390400446!5m2!1sja!2sjp"
-allowfullscreen=""
 loading="lazy">
 </iframe>
 
-  </div>
+</div>
 </section>
-
-<!-- ===== FOOTER ===== -->
 
 <footer>
 © 2026 Lecker Lecker Bäckerei
-<a href="#" class="back-to-top">↑ TOP</a>
 </footer>
+
+<a href="#" class="back-to-top">↑ TOP</a>
 
 </body>
 </html>
