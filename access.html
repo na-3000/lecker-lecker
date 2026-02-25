@@ -51,12 +51,9 @@ header{
    HEADER（中央完全調整版）
 ============================= */
 
+/* 不要な height を削除 */
 header{
-
-    /* サイズ */
-    padding:26px 0 22px;
-
-    /* 中央配置（これが核） */
+    padding:26px 0 22px; /* これで上下高さ調整 */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -64,7 +61,6 @@ header{
     text-align:center;
 
     color:white;
-
     background:linear-gradient(
         180deg,
         #e2c45a 0%,
@@ -73,45 +69,18 @@ header{
     );
 
     position:relative;
-
-    /* 上下バランス補正（視覚中央） */
     transform:translateY(-2px);
-
     box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* ===== 外枠 ===== */
-header::before{
-    content:"";
-    position:absolute;
-    inset:12px;
-    border:2px solid #e8d79b;
-    border-radius:18px;
-    pointer-events:none;
-}
-
-/* ===== 内側ライン ===== */
-header::after{
-    content:"";
-    position:absolute;
-    inset:20px;
-    border:1px solid rgba(255,255,255,0.4);
-    border-radius:12px;
-    pointer-events:none;
-}
-
-/* タイトル */
 header h1{
     margin:0;
     font-size:46px;
     line-height:1;
     letter-spacing:2px;
-
-    /* ← 視覚中央補正（超重要） */
     transform:translateY(3px);
 }
 
-/* サブタイトル */
 header p{
     margin:6px 0 0;
     font-size:15px;
