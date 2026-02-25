@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -7,6 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== 全体 ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -15,100 +23,185 @@ body {
     text-align: center;
 }
 
+/* ===== HEADER ===== */
+
 header {
     background-color: #c6a436;
     color: white;
     padding: 40px 0;
 }
 
-h1 {
+header h1 {
     font-size: 40px;
     margin: 0;
 }
 
+/* ===== ナビ ===== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.menu-button {
+    padding: 14px 28px;
+    background-color: #D4AF37;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #b8962e;
+}
+
+/* ===== コンテンツ ===== */
+
 section {
     padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
 }
+
+h2 {
+    margin-top: 40px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
     background-color: #c6a436;
     color: white;
     padding: 20px 0;
     font-size: 14px;
+    margin-top: 60px;
 }
+
+/* ===== TOPへ戻る ===== */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: #c6a436;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #b8962e;
+    transform: translateY(-3px);
+}
+
 </style>
+
 </head>
 
 <body>
+
+<!-- ===== HEADER ===== -->
 
 <header>
     <h1>Bäcker gesucht</h1>
     <p>-ドイツパン職人募集-</p>
 </header>
 
+<!-- ===== NAVIGATION ===== -->
+
+<nav>
+
+<a href="index.html" class="menu-button">
+Startseite<br><span>-トップ-</span>
+</a>
+
+<a href="menu.html" class="menu-button">
+Vorstellung<br><span>-商品紹介-</span>
+</a>
+
+<a href="recruit.html" class="menu-button">
+Stellenangebot<br><span>-ドイツパン職人募集-</span>
+</a>
+
+<a href="access.html" class="menu-button">
+Anfahrt<br><span>-アクセス-</span>
+</a>
+
+<a href="news.html" class="menu-button">
+Öffnungszeiten・Nachrichten<br>
+<span>-営業時間・お知らせ-</span>
+</a>
+
+</nav>
+
+<!-- ===== CONTENT ===== -->
+
 <section>
-    <h2 style="margin-top:40px;">
-  <span style="display:block; font-size:28px; letter-spacing:1px;">
-    Traditionen bewahren, Freude bereiten
-  </span>
-  <span style="display:block; font-size:16px; margin-top:8px; opacity:0.8;">
-    -伝統を守り、笑顔を生み出す-
-  </span>
+
+<h2>
+<span style="display:block; font-size:28px; letter-spacing:1px;">
+Traditionen bewahren, Freude bereiten
+</span>
+<span style="display:block; font-size:16px; margin-top:8px; opacity:0.8;">
+-伝統を守り、笑顔を生み出す-
+</span>
 </h2>
-    <p style="margin-bottom:50px;">
-        本場ドイツの製法を大切にしながら、<br>
-        丁寧にパンと向き合える方を募集します。
-    </p>
 
-    <h3 style="margin-bottom:10px;">募集職種</h3>
-    <p style="margin-bottom:30px;">
-        ドイツパン製造スタッフ<br>
-        ブレッツェル製造担当<br>
-        将来の工房責任者候補
-    </p>
+<p style="margin-bottom:50px;">
+本場ドイツの製法を大切にしながら、<br>
+丁寧にパンと向き合える方を募集します。
+</p>
 
-    <h3 style="margin-bottom:10px;">勤務時間</h3>
-    <p style="margin-bottom:30px;">
-      月曜日～金曜日<br>
-    　3:00〜13:00（早朝勤務あり）
-    </p> 
+<h3>募集職種</h3>
+<p style="margin-bottom:30px;">
+ドイツパン製造スタッフ<br>
+ブレッツェル製造担当<br>
+将来の工房責任者候補
+</p>
 
-    <h3 style="margin-bottom:10px;">勤務地</h3>
-    <p style="margin-bottom:30px;">
-      当工房<br>
-    （東京都中央区日本橋）
-    </p> 
-    
-    <h3 style="margin-bottom:10px;">待遇</h3>
-    <p style="margin-bottom:30px;">
-      能力による<br>
-      応相談
-    </p>
-    
-    <h3 style="margin-bottom:10px;">応募方法</h3>
-    <p style="margin-bottom:30px;">
-    nahara@ezweb.ne.jp</p>
+<h3>勤務時間</h3>
+<p style="margin-bottom:30px;">
+月曜日～金曜日<br>
+3:00〜13:00（早朝勤務あり）
+</p>
+
+<h3>勤務地</h3>
+<p style="margin-bottom:30px;">
+当工房（東京都中央区日本橋）
+</p>
+
+<h3>待遇</h3>
+<p style="margin-bottom:30px;">
+能力による<br>
+応相談
+</p>
+
+<h3>応募方法</h3>
+<p style="margin-bottom:30px;">
+nahara@ezweb.ne.jp
+</p>
+
 </section>
+
+<!-- ===== FOOTER ===== -->
 
 <footer>
 © 2026 Lecker Lecker Bäckerei
+<a href="#" class="back-to-top">↑ TOP</a>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
