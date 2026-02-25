@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -10,10 +9,7 @@
 <style>
 
 /* ===== 全体 ===== */
-
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -23,7 +19,6 @@ body {
 }
 
 /* ===== HEADER ===== */
-
 header {
     background-color: #c6a436;
     color: white;
@@ -41,7 +36,6 @@ header p {
 }
 
 /* ===== ナビ ===== */
-
 nav {
     display: flex;
     justify-content: center;
@@ -63,16 +57,15 @@ nav {
 .menu-button:hover {
     background-color: #b8962e;
 }
-    /* ===== 現在ページ ===== */
 
+/* ===== 現在ページ（押せない） ===== */
 .menu-button.active {
-    background-color: #b8962e;
+    background-color: #b8932a;
     pointer-events: none;
     cursor: default;
 }
 
 /* ===== レイアウト ===== */
-
 .menu-layout {
     display: flex;
     gap: 60px;
@@ -101,7 +94,6 @@ nav {
 }
 
 /* ===== 商品 ===== */
-
 .menu-container {
     flex: 1;
     display: flex;
@@ -155,7 +147,6 @@ nav {
 }
 
 /* ===== FOOTER ===== */
-
 footer {
     background-color: #c6a436;
     color: white;
@@ -165,7 +156,6 @@ footer {
 }
 
 /* ===== TOPへ戻る ===== */
-
 .back-to-top {
     position: fixed;
     right: 25px;
@@ -197,14 +187,13 @@ footer {
 </header>
 
 <!-- ===== ナビ ===== -->
-
 <nav>
 
 <a href="index.html" class="menu-button">
 Startseite<br><span>-トップ-</span>
 </a>
 
-<a href="menu.html" class="menu-button active">
+<a class="menu-button active">
 Vorstellung<br><span>-商品紹介-</span>
 </a>
 
@@ -217,8 +206,7 @@ Anfahrt<br><span>-アクセス-</span>
 </a>
 
 <a href="news.html" class="menu-button">
-Öffnungszeiten・Nachrichten<br>
-<span>-営業時間・お知らせ-</span>
+Öffnungszeiten・Nachrichten<br><span>-営業時間・お知らせ-</span>
 </a>
 
 </nav>
@@ -239,7 +227,7 @@ Anfahrt<br><span>-アクセス-</span>
 <div class="menu-container">
 
 <div class="product-card">
-<img src="lecker-brezel 日本橋.png">
+<img src="lecker-brezel 日本橋.png" alt="Brezel">
 <div class="product-info">
 <span class="de">Brezel</span><br>
 <span class="jp-title">ブレッツェル</span>
@@ -250,7 +238,7 @@ Anfahrt<br><span>-アクセス-</span>
 </div>
 
 <div class="product-card">
-<img src="pan3.png">
+<img src="pan3.png" alt="Käsebrezel">
 <div class="product-info">
 <span class="de">Käsebrezel</span><br>
 <span class="jp-title">ケーゼブレッツェル</span>
@@ -261,7 +249,7 @@ Anfahrt<br><span>-アクセス-</span>
 </div>
 
 <div class="product-card">
-<img src="pan4.png">
+<img src="pan4.png" alt="Zwiebelkuchen">
 <div class="product-info">
 <span class="de">Zwiebelkuchen</span><br>
 <span class="jp-title">ツヴィーベルクーヘン</span>
@@ -272,7 +260,7 @@ Anfahrt<br><span>-アクセス-</span>
 </div>
 
 <div class="product-card">
-<img src="lecker-lecker-Belegte Brezel 日本橋.png">
+<img src="lecker-lecker-Belegte Brezel 日本橋.png" alt="Belegte Brezel">
 <div class="product-info">
 <span class="de">Belegte Brezel</span><br>
 <span class="jp-title">ブレッツェルサンド</span>
@@ -302,7 +290,7 @@ Anfahrt<br><span>-アクセス-</span>
 <div class="menu-container">
 
 <div class="product-card">
-<img src="lecker-lecker-Jingerbrezel 日本橋.png">
+<img src="lecker-lecker-Jingerbrezel 日本橋.png" alt="Brezel mit Ingwer-Zuckerguss">
 <div class="product-info">
 <span class="de">Brezel mit Ingwer-Zuckerguss</span><br>
 <span class="jp-title">ジンジャーアイシングブレッツェル</span>
@@ -313,7 +301,7 @@ Anfahrt<br><span>-アクセス-</span>
 </div>
 
 <div class="product-card">
-<img src="lecker-lecker-Blaubeerschnitte 日本橋.png">
+<img src="lecker-lecker-Blaubeerschnitte 日本橋.png" alt="Blaubeerschnitte">
 <div class="product-info">
 <span class="de">Blaubeerschnitte</span><br>
 <span class="jp-title">ブルーベリーシュニット</span>
