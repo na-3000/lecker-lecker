@@ -5,66 +5,35 @@
 
 <title>Recruit | Lecker Lecker｜日本橋にある本場ドイツのブレッツェルとツヴィーベルクーヘンの小さな工房</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== 基本 ===== */
-html { scroll-behavior:smooth; }
-
-body{
-    margin:0;
-    font-family:'Playfair Display',serif;
-    background:#ffffff;
-    color:#4A2E1F;
-    text-align:center;
+/* ===== 全体 ===== */
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #ffffff;
+    color: #4A2E1F;
+    text-align: center;
 }
 
-/* =============================
-   HEADER（メニューボタン統一版）
-============================= */
-
-header{
-    height:140px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    color:white;
-
-    background:linear-gradient(
-        180deg,
-        #e2c45a 0%,
-        #d4af37 50%,
-        #b8962e 100%
-    );
-
-    position:relative;
-}
-
-/* 中央完全調整版 */
-header{
-    padding:26px 0 22px;
+/* ===== HEADER ===== */
+header {
+    padding:26px 0 22px; /* ニュースページと同じ高さ */
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
     color:white;
-    background:linear-gradient(
-        180deg,
-        #e2c45a 0%,
-        #d4af37 50%,
-        #b8962e 100%
-    );
+    background:linear-gradient(180deg,#e2c45a 0%,#d4af37 50%,#b8962e 100%);
     position:relative;
     transform:translateY(-2px);
     box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* 外枠 */
 header::before{
     content:"";
     position:absolute;
@@ -74,7 +43,6 @@ header::before{
     pointer-events:none;
 }
 
-/* 内側ライン */
 header::after{
     content:"";
     position:absolute;
@@ -84,27 +52,22 @@ header::after{
     pointer-events:none;
 }
 
-/* タイトル */
 header h1{
     margin:0;
-    font-size:46px;
+    font-size:46px; /* ニュースページと同じ */
     line-height:1;
     letter-spacing:2px;
     transform:translateY(3px);
 }
 
-/* サブタイトル */
 header p{
     margin:6px 0 0;
-    font-size:15px;
+    font-size:15px; /* ニュースページと同じ */
     letter-spacing:2px;
     opacity:.9;
 }
 
-/* =============================
-   ナビゲーション
-============================= */
-
+/* ===== NAV ===== */
 nav{
     display:flex;
     justify-content:center;
@@ -113,7 +76,6 @@ nav{
     flex-wrap:wrap;
 }
 
-/* ===== メニューボタン ===== */
 .menu-button{
     position:relative;
     display:inline-block;
@@ -123,16 +85,10 @@ nav{
     color:white;
     font-weight:600;
     letter-spacing:1px;
-    background:linear-gradient(
-        180deg,
-        #e2c45a 0%,
-        #d4af37 40%,
-        #c49b2a 100%
-    );
+    background:linear-gradient(180deg,#e2c45a 0%,#d4af37 40%,#c49b2a 100%);
     transition:.3s;
 }
 
-/* 枠 */
 .menu-button::before{
     content:"";
     position:absolute;
@@ -155,23 +111,14 @@ nav{
     transform:translateY(-3px);
 }
 
-/* ===== 現在ページ（押せない） ===== */
 .menu-button.active{
-    background: linear-gradient(
-        180deg,
-        #d8bb4f 0%,
-        #caa534 50%,
-        #b8932a 100%
-    );
+    background: linear-gradient(180deg,#d8bb4f 0%,#caa534 50%,#b8932a 100%);
     cursor: default;
     pointer-events: none;
     transform: none;
 }
 
-/* =============================
-   コンテンツ
-============================= */
-
+/* ===== CONTENT ===== */
 section{
     padding:40px 20px 80px;
 }
@@ -194,10 +141,7 @@ p{
     margin-bottom:24px;
 }
 
-/* =============================
-   TOPボタン
-============================= */
-
+/* ===== TOPボタン ===== */
 .back-to-top{
     position:fixed;
     right:25px;
@@ -206,12 +150,7 @@ p{
     text-decoration:none;
     color:white;
     font-weight:600;
-    background:linear-gradient(
-        180deg,
-        #e2c45a 0%,
-        #d4af37 40%,
-        #c49b2a 100%
-    );
+    background:linear-gradient(180deg,#e2c45a 0%,#d4af37 40%,#c49b2a 100%);
     transition:.3s;
 }
 
@@ -235,25 +174,21 @@ p{
     transform:translateY(-3px);
 }
 
-/* =============================
-   FOOTER
-============================= */
-
+/* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, #D4AF37, #B8962E);
-    color: white;
-    padding: 32px 0;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    box-shadow: 0 -6px 18px rgba(0,0,0,0.12);
-    position: relative;
+    background: linear-gradient(135deg,#D4AF37,#B8962E);
+    color:white;
+    padding:32px 0;
+    font-size:14px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:80px;
+    box-shadow:0 -6px 18px rgba(0,0,0,0.12);
+    position:relative;
 }
 
-/* 外枠 */
 footer::before{
     content:"";
     position:absolute;
@@ -263,7 +198,6 @@ footer::before{
     pointer-events:none;
 }
 
-/* 内側ライン */
 footer::after{
     content:"";
     position:absolute;
@@ -279,14 +213,12 @@ footer::after{
 <body>
 
 <!-- HEADER -->
-
 <header>
 <h1>Bäcker gesucht</h1>
 <p>-ドイツパン職人募集-</p>
 </header>
 
 <!-- NAV -->
-
 <nav>
 <a href="index.html" class="menu-button">
 <span style="font-size:20px;font-weight:700;">Startseite</span><br>
@@ -298,7 +230,6 @@ footer::after{
 <span>-商品紹介-</span>
 </a>
 
-<!-- ★ 今のページ -->
 <a class="menu-button active">
 <span style="font-size:20px;font-weight:700;">Stellenangebot</span><br>
 <span>-ドイツパン職人募集-</span>
@@ -316,7 +247,6 @@ footer::after{
 </nav>
 
 <!-- CONTENT -->
-
 <section>
 <div class="content">
 
@@ -367,7 +297,6 @@ nahara@ezweb.ne.jp
 </section>
 
 <!-- FOOTER -->
-
 <footer>
 © 2026 Lecker Lecker Bäckerei
 <a href="#" class="back-to-top">↑ TOP</a>
